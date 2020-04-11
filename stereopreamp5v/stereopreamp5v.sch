@@ -62,17 +62,6 @@ NoConn ~ 650  7100
 NoConn ~ 650  7400
 NoConn ~ 650  7700
 $Comp
-L Connector:Conn_Coaxial J3
-U 1 1 5E905D21
-P 10650 1950
-F 0 "J3" H 10750 1925 50  0000 L CNN
-F 1 "Conn_Coaxial" H 10750 1834 50  0000 L CNN
-F 2 "" H 10650 1950 50  0001 C CNN
-F 3 " ~" H 10650 1950 50  0001 C CNN
-	1    10650 1950
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:CP C1
 U 1 1 5E906B9D
 P 5450 1800
@@ -317,8 +306,6 @@ F 3 "~" H 9350 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10150 1950 10450 1950
-Wire Wire Line
 	8450 2150 9350 2150
 Wire Wire Line
 	9850 1950 9350 1950
@@ -327,14 +314,9 @@ Wire Wire Line
 Connection ~ 9350 1950
 Wire Wire Line
 	9350 1950 9350 2150
-Wire Wire Line
-	10650 2150 10650 3900
-Wire Wire Line
-	10650 3900 9350 3900
 Connection ~ 8700 3900
 Wire Wire Line
 	9350 2850 9350 3900
-Connection ~ 9350 3900
 Wire Wire Line
 	9350 3900 8700 3900
 $Comp
@@ -405,21 +387,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6500 2650 50  0001 C CNN
 	3    6500 2650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1350 2100 1350 3050
-$Comp
-L Connector:Conn_Coaxial J1
-U 1 1 5E904417
-P 1350 1900
-F 0 "J1" H 1450 1875 50  0000 L CNN
-F 1 "Conn_Coaxial" H 1450 1784 50  0000 L CNN
-F 2 "" H 1350 1900 50  0001 C CNN
-F 3 " ~" H 1350 1900 50  0001 C CNN
-	1    1350 1900
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	1550 1900 1800 1900
 Connection ~ 2400 1900
 Wire Wire Line
 	2100 1900 2400 1900
@@ -435,7 +402,7 @@ F 3 "~" H 1950 1900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3400 3900 4650 3900
+	3400 3900 4300 3900
 $Comp
 L Device:R R3
 U 1 1 5E90A2D4
@@ -484,14 +451,7 @@ Wire Wire Line
 Wire Wire Line
 	5600 3900 5100 3900
 Wire Wire Line
-	1350 3050 2400 3050
-Wire Wire Line
-	2400 3050 2400 2750
-Wire Wire Line
-	2400 3050 2400 3900
-Wire Wire Line
 	2400 3900 3400 3900
-Connection ~ 2400 3050
 Connection ~ 3400 3900
 Wire Wire Line
 	9350 2550 9350 2150
@@ -547,4 +507,36 @@ Wire Wire Line
 Connection ~ 4150 2200
 Wire Wire Line
 	4150 2200 4250 2200
+$Comp
+L Connector:AudioJack3 J1
+U 1 1 5E91EC0C
+P 4200 4550
+F 0 "J1" V 4228 4738 50  0000 L CNN
+F 1 "AudioJack3" V 4137 4738 50  0000 L CNN
+F 2 "" H 4200 4550 50  0001 C CNN
+F 3 "~" H 4200 4550 50  0001 C CNN
+	1    4200 4550
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4300 4350 4300 3900
+Connection ~ 4300 3900
+Wire Wire Line
+	4300 3900 4650 3900
+Wire Wire Line
+	4100 4350 1650 4350
+Wire Wire Line
+	1650 4350 1650 1900
+Wire Wire Line
+	1650 1900 1800 1900
+Wire Wire Line
+	2400 2750 2400 3900
+Wire Wire Line
+	10150 1950 10300 1950
+Wire Wire Line
+	10300 1950 10300 4200
+Wire Wire Line
+	10300 4200 4200 4200
+Wire Wire Line
+	4200 4200 4200 4350
 $EndSCHEMATC
